@@ -37,8 +37,11 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form', '>= 3.0.0.rc'
 gem "activesupport", "~> 4.0.0"
-gem 'bootstrap-components-helpers',
-  :git => 'git://gist.github.com/2117187.git'
+gem 'bootstrap-components-helpers'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
