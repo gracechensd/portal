@@ -1,0 +1,104 @@
+<!--
+<%= javascript_include_tag "accordion" %>
+<%= javascript_include_tag "effects" %>
+<%= javascript_include_tag "prototype" %>
+
+<script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+</script>
+-->
+
+<div class="row">
+  <div class="span3">
+    <ul class="nav nav-list">
+      <li class="nav-header">Sidebar</li>
+      <li><a href="#faq"><i class="icon-chevron-right"></i>FAQ</a></li>
+      <li><a href="#contact"><i class="icon-chevron-right"></i>Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Begin Help -->
+  <div class="span9">
+    <div id="faq"><!-- Start FAQ -->
+      <h2>Help</h2>
+      <h4>Frequently Asked Questions</h4><!-- Begin Accordion -->
+      <div class="accordion" id="faq">
+        
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+            How do I create a folder or container?
+            </a>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <ol><li>Click the "New Folder" button</li>
+              <li>Type the name of the new folder into the textbox that appears</li>
+              <li>Press "Add"</li></ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+            How do I open a folder?
+            </a>
+          </div>
+          <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+            Click on the name of the folder within the "Name" column.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+            How do I upload a folder?
+            </a>
+          </div>
+          <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner">
+            It is not possible, at present, to upload a folder. As an alternative, you can upload the folder as a zip file.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">
+            How do I upload a file?
+            </a>
+          </div>
+          <div id="collapseFour" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <ol><li>Within a Container (click to open one of the folders in myCloud Home)</li>
+              <li>Click the Upload button</li>
+              <li>Click the Choose Files button in the new window that pops up
+              <li>Click navigate to your file, select it, then press Open</li></ol>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End Accordion -->
+<!-- Test
+<div id="accordion">
+  <h4>header</h4>
+  <div>content 1</div>
+  <h4>header 2</h4>
+  <div>content 2</div>
+</div> -->
+
+    </div><!-- End FAQ -->
+
+    <div id="contact">
+      <h4>Contact</h4>
+      <p>For assistance please contact <a href="mailto:support@sdsc.edu">
+      support@sdsc.edu</a>.</p></p>
+    </div>
+
+  </div>
+</div><!-- End Help -->
