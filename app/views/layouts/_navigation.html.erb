@@ -5,27 +5,9 @@
   <%= menu_item "Services", '/home/services' %>
   <%= menu_item "Billing", '/home/billing' %>
   <%= menu_item "Help", '/home/help' %>
+  <%= menu_item "Signup", signup_path %>
 <% end %>
-<!-- 
-<div class="nav-collapse collapse">
-  <ul class="nav">
-    <li><a href="./index.html">Home</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="./dashboard.html">Dashboard </a></li>
-    <li><a href="./services.html">Services </a></li>
-    <li><a href="./billing.html">Billing</a></li>
-    <li><a href="./help.html">Help</a></li>
-  </ul>
-</div>
- -->
 <form class="navbar-form pull-right">
-  <!--
-  <%= menu_item "Edit Profile" %>
-  <%= menu_item "Account Settings" %>
-  <%= menu_item "Log Out" %> 
-
-  <%= email_field(:user, :address) %>
-  <%= password_field_tag(:password) %> -->
   <input class="span2" type="text" placeholder="Email">
   <input class="input-small" type="password" placeholder="Password">
   <button type="submit" class="btn">Log in</button>
