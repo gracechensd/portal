@@ -3,12 +3,15 @@ My::Application.routes.draw do
   get "home/index"
   resources :home
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root to: "home#index"
   match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/about',   to: 'home#about',           via: 'get'
 
   # Example of regular route:
