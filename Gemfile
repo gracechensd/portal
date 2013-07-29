@@ -35,6 +35,7 @@ end
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem "activesupport", "~> 4.0.0"
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.1.2'
