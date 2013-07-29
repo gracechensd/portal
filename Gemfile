@@ -35,18 +35,19 @@ end
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem 'simple_form', '>= 3.0.0.rc'
 gem "activesupport", "~> 4.0.0"
-gem 'bootstrap-components-helpers'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
 end
 
 group :test do
+  gem "capybara", '~> 1.0'
   gem 'factory_girl_rails', '4.2.1'
-  gem "capybara"
   gem "launchy"
 end
 

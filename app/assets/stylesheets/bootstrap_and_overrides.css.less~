@@ -162,7 +162,7 @@ body { padding-top:60px ; padding-bottom: 40px ; }
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid #AAAAAA;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -194,7 +194,6 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  @include box_sizing;
 }
 
 input {
@@ -209,10 +208,6 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
 
 
 @import "twitter/bootstrap/responsive";
