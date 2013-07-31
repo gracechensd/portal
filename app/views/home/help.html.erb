@@ -1,14 +1,6 @@
 <% provide(:title, 'Help') %>
 <!--
-<%= javascript_include_tag "accordion" %>
-<%= javascript_include_tag "effects" %>
-<%= javascript_include_tag "prototype" %>
-
-<script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
-</script>
+This page has difficulty properly closing and opening the FAQ questions.
 -->
 
 <div class="row">
@@ -85,13 +77,27 @@
         </div>
 
       </div><!-- End Accordion -->
-<!-- Test
-<div id="accordion">
-  <h4>header</h4>
-  <div>content 1</div>
-  <h4>header 2</h4>
-  <div>content 2</div>
-</div> -->
+
+    <!-- Test, based on cloud.sdsc.edu
+    <ol><li>
+    <a href="javascript:toggleDiv('faq_answer1');">
+    How do I create a folder or container?</a>
+
+    <div id="faq_answer1">
+    <br />
+    <ol>
+    <li>Click the "New Folder" button</li>
+    <li>Type the name of the new folder into the textbox that appears</li>
+    <li>Press "Add"</li>
+    </ol>
+    </div>
+
+    <script type="text/javascript">
+    $("#faq_answer1").hide();
+    </script>
+    </li>
+
+    -->
 
     </div><!-- End FAQ -->
 
