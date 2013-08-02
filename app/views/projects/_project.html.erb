@@ -1,0 +1,15 @@
+<span class="content"><%= project.name %></span>
+<span class="content"><%= project.b_index %></span>
+<span class="content"><%= project.schedule %></span>
+<span class="content"><%= project.ret_per %></span>
+<span class="content"><%= project.status %></span>
+<span class="timestamp">
+  Created <%= time_ago_in_words(project.created_at) %> ago.
+</span>
+
+  <% if current_user?(project.user) %>
+    <%= link_to "delete", project, method: :delete,
+                                     data: { confirm: "Are you sure you want to delete this project?" } %>
+  <% end %>
+
+<hr>

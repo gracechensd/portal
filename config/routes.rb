@@ -4,6 +4,7 @@ My::Application.routes.draw do
   resources :home
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :projects, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +14,8 @@ My::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/about',   to: 'home#about',           via: 'get'
+  match '/index',   to: 'home#index',           via: 'get'
+  match '/newproject', to: 'projects#newproject', via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

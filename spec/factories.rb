@@ -9,4 +9,13 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  factory :project do
+    name "Lorem ipsum"
+    user
+    b_index "1234567"
+    schedule 1
+    ret_per 1
+    status 1
+  end
 end
