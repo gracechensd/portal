@@ -1,23 +1,17 @@
 <% provide(:title, 'Services') %>
-<!-- Begin List -->
-<div class="row">
-  <div class="span8">
-    <h2>Service 1</h2>
-    <p>Description Here</p>
-  </div>
-  <div class="span3 offset1">
-    <button type="#" class="btn btn-primary">Sign Up</button>
-  </div>
-</div>
+<h2>Services</h2>
+
+<% @services.each do |service| %>
 
 <hr>
-
 <div class="row">
   <div class="span8">
-    <h2>Service 2</h2>
-    <p>Description Here</p>
+    <h3><%= service.name %></h3>
+    <p><%= service.description %></p>
   </div>
   <div class="span3 offset1">
     <button type="#" class="btn btn-primary">Sign Up</button>
   </div>
 </div>
+
+<% end %>

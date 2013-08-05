@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
-  before_action :signed_in_user, only: [:create, :destroy]
+  before_action :signed_in_user, only: [:newproject, :create, :destroy]
   before_action :correct_user,   only: :destroy
 
   def new
-    	@project = Project.new(:schedule => "1", :ret_per => "1", :status => "1")
+    @project = Project.new(:schedule => "1", :ret_per => "1", :status => "1")
   end
 
   def newproject
@@ -26,13 +26,23 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to root_url
+    flash[:success] = "Project deleted"
+    redirect_to(:back)
   end
 
   private
 
     def project_params
-      params.require(:project).permit(:name)
+      params.require(:project).permit(:name, :b_index, :schedule, :ret_per, :status)
+    end
+
+    # Before filters
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
     end
 
     def correct_user

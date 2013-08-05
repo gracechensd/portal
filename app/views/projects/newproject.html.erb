@@ -9,27 +9,27 @@
       <%= f.label "Project Name" %>
       <%= f.text_field :name %>
 
-      <%= f.label "Billing Index (7 characters)" %>
+      <%= f.label :b_index, "Billing Index (7 characters)" %>
       <%= f.text_field :b_index %>
 
       <div class="form_row">
         <label for="schedule">Schedule:</label>
-        <%= radio_button_tag 'schedule', '1', true %> 6 Hour Full
-        <br><%= radio_button_tag 'schedule', '2' %> Weekly Full
-        <br><%= radio_button_tag 'schedule', '3' %> Weekly Full with Daily Incremental
-        <br><%= radio_button_tag 'schedule', '4' %> Monthly Full
-        <br><%= radio_button_tag 'schedule', '5' %> Monthly Full with Weekly Differential, Daily Incremental
-        <br><%= radio_button_tag 'schedule', '6' %> BiMonthly Full with Weekly Differential, Daily Incremental
+        <%= radio_button_tag 'schedule', "1", true %> 6 Hour Full
+        <br><%= radio_button_tag 'schedule', "2" %> Weekly Full
+        <br><%= radio_button_tag 'schedule', "3" %> Weekly Full with Daily Incremental
+        <br><%= radio_button_tag 'schedule', "4" %> Monthly Full
+        <br><%= radio_button_tag 'schedule', "5" %> Monthly Full with Weekly Differential, Daily Incremental
+        <br><%= radio_button_tag 'schedule', "6" %> BiMonthly Full with Weekly Differential, Daily Incremental
       </div>
       <br>
 
       <div class="form_row">
         <label for="ret_per">Retention Period:</label>
-        <%= radio_button_tag 'ret_per', '1', true %> 1 year
-        <br><%= radio_button_tag 'ret_per', '2' %> 3 months
-        <br><%= radio_button_tag 'ret_per', '3' %> 1 month
-        <br><%= radio_button_tag 'ret_per', '4' %> 2 weeks
-        <br><%= radio_button_tag 'ret_per', '5' %> Indefinite
+        <%= radio_button_tag 'ret_per', "1", true %> 1 year
+        <br><%= radio_button_tag 'ret_per', "2" %> 3 months
+        <br><%= radio_button_tag 'ret_per', "3" %> 1 month
+        <br><%= radio_button_tag 'ret_per', "4" %> 2 weeks
+        <br><%= radio_button_tag 'ret_per', "5" %> Indefinite
       </div>
       <br>
 

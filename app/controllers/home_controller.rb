@@ -6,4 +6,12 @@ class HomeController < ApplicationController
   def show
     render home_path
   end
+
+  def dashboard
+    @services = Service.all
+  end
+
+  def services
+    @services = Service.all
+  end
 end

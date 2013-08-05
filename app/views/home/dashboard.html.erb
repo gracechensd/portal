@@ -1,35 +1,46 @@
 <% provide(:title, 'Dashboard') %>
-<div class="container">
-      <!-- Tabs -->
-      <div class="row">
-        <div class="span9"><div class="tabbable">
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab1" data-toggle="tab">Service 1</a></li>
-            <li><a href="#tab2" data-toggle="tab">Service 2</a></li>
-          </ul>
-          <!-- Individual Tabs -->
-          <div class="tab-content">
+<h2>Dashboard</h2>
 
-            <div class="tab-pane active" id="tab1">
-              <p>Graph 1</p>
-            </div>
+<!-- Tabs -->
+<div class="row">
+  <div class="span9"><div class="tabbable">
+    <ul class="nav nav-tabs">
 
-            <div class="tab-pane" id="tab2">
-              <p>Graph 2</p>
-            </div>
+      <% @services[0...1].each do |service| %>
+      <li class="active"><a href="#<%= service.id%>" data-toggle="tab"><%= service.name %></a></li>
+      <% end %>
 
-          </div> <!-- End Individual Tabs -->
-        </div></div> <!-- End Tabs -->
+      <% @services[1..-1].each do |service| %>
+      <li><a href="#<%= service.id%>" data-toggle="tab"><%= service.name %></a></li>
+      <% end %>
+    </ul>
 
-        <div class="span3">
-          <div class="well">
-            <!-- Side Box -->
-            <h3>This Month</h3>
-            <p>Service 1 = </p>
-            <p>Service 2 = </p>
-            <hr>
-            <p>Total = </p>
-          </div>
-        </div><!-- End Side Box -->
+    <!-- Individual Tabs -->
+    <div class="tab-content">
+      <% @services[0...1].each do |service| %>
+      <div class="tab-pane active" id="<%= service.id%>">
+        <p>Graph <%= service.id%></p>
+      </div>
+      <% end %>
 
-      </div><!-- End Row -->
+      <% @services[1..-1].each do |service| %>
+      <div class="tab-pane" id="<%= service.id%>">
+        <p>Graph <%= service.id%></p>
+      </div>
+      <% end %>
+    </div> <!-- End Individual Tabs -->
+  </div></div> <!-- End Tabs -->
+
+  <div class="span3">
+    <div class="well">
+      <!-- Side Box -->
+      <h3>This Month</h3>
+      <% @services.each do |service| %>
+      <p align="right"><%= service.name%> = </p>
+      <% end %>
+      <hr>
+      <p align="right">Total = </p>
+    </div>
+  </div><!-- End Side Box -->
+
+</div><!-- End Row -->

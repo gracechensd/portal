@@ -6,7 +6,8 @@ class HomeController < ApplicationController
   def show
     render home_path
   end
-  def newproject
-    @project = current_user.projects.build if signed_in?
+
+  def services
+    @services = Service.all
   end
 end

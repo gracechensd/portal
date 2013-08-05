@@ -7,6 +7,12 @@ describe "Project pages" do
   let(:user) { FactoryGirl.create(:user) }
   before { sign_in user }
 
+  describe "create" do
+    let(:user) { FactoryGirl.create(:user) }
+    before do
+      sign_in user
+    end
+
   describe "project creation" do
     before { visit root_path }
 

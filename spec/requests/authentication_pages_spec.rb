@@ -84,6 +84,11 @@ describe "Authentication" do
 
     describe "in the Projects controller" do
 
+        describe "visiting the new project page" do
+          before { visit projects_path}
+          it { should have_title('Sign in') }
+        end
+
         describe "submitting to the create action" do
           before { post projects_path }
           specify { expect(response).to redirect_to(signin_path) }
